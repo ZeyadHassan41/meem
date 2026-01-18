@@ -9,7 +9,7 @@ const csvInput = document.getElementById("csv-upload");
 const bulkBtn = document.getElementById("bulk-btn");
 
 // CONFIGURATION
-const imageSrc = "/Meem-Certificate-Template.png";
+const imageSrc = "/meem-certificate-template.png";
 
 const nameConfig = {
     font: '600 64px "Rubik", sans-serif',
@@ -38,13 +38,11 @@ image.onload = function () {
 
 // HELPERS
 
-
 function formatDate(dateString) {
     const date = dateString ? new Date(dateString) : new Date();
     const options = { year: "numeric", month: "long" };
     return date.toLocaleDateString("en-US", options);
 }
-
 
 function drawCertificate(nameOverride = null) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
