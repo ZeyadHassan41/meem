@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Meem English - Certificate Generator</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Rubik:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="header-content">
+                <img
+                    src="meem-logo.png"
+                    alt="Meem English Community"
+                    class="brand-logo"
+                />
+                <div class="user-badge">Soon</div>
+            </div>
+        </header>
+
+        <main class="main-container">
+            <div class="page-header">
+                <h1>Certificate Generator</h1>
+                <!-- <p>
+                    Generate official certificates for students individually or
+                    in bulk.
+                </p> -->
+            </div>
+
+            <div id="meem-cert-generator">
+                <div class="cert-controls-wrapper">
+                    <div class="control-grid">
+                        <div class="input-group">
+                            <label for="cert-name-input">Student Name</label>
+                            <input
+                                type="text"
+                                id="cert-name-input"
+                                placeholder="e.g. Ahmed Ali"
+                                autocomplete="off"
+                            />
+                        </div>
+
+                        <div class="input-group">
+                            <label for="cert-date-input">Issue Date</label>
+                            <input type="date" id="cert-date-input" />
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button
+                            id="preview-btn"
+                            class="meem-btn meem-btn-outline"
+                        >
+                            Refresh Preview
+                        </button>
+                        <button
+                            id="download-btn"
+                            class="meem-btn meem-btn-primary"
+                        >
+                            Download Certificate
+                        </button>
+                    </div>
+
+                    <div class="bulk-control-section">
+                        <h4>Bulk Generation (CSV)</h4>
+                        <div class="bulk-input-row">
+                            <input
+                                type="file"
+                                id="csv-upload"
+                                accept=".csv, .txt"
+                            />
+                            <button
+                                id="bulk-btn"
+                                class="meem-btn meem-btn-success"
+                            >
+                                Generate .ZIP
+                            </button>
+                        </div>
+                        <p class="bulk-help-text">
+                            Upload a CSV or TXT file with one name per line.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="canvas-preview-area">
+                    <div class="canvas-shadow-box">
+                        <canvas
+                            id="cert-canvas"
+                            width="2000"
+                            height="1414"
+                        ></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
