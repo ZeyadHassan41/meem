@@ -9,7 +9,7 @@ const csvInput = document.getElementById("csv-upload");
 const bulkBtn = document.getElementById("bulk-btn");
 
 // CONFIGURATION
-const imageSrc = "/Meem-Certificate-Template.png";
+const imageSrc = "Meem-Certificate-Template.png";
 
 const nameConfig = {
     font: '600 64px "Rubik", sans-serif',
